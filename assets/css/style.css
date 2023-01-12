@@ -1,13 +1,17 @@
 body {
     margin: 0;
     padding: 0;
-    
+    background-image: url('hello.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 nav {
     margin: 0;
     padding: 40px;
     text-align: center;
-    background: linear-gradient(35deg, lightskyblue , whitesmoke 85%);
+    background: linear-gradient(45deg, blue , lightskyblue 75%);
     color: white;
     font-size: 40px;
 }
@@ -36,7 +40,7 @@ main {
 
 #current {
     
-    background: linear-gradient(35deg, lightskyblue , whitesmoke 95%);
+    background: linear-gradient(to top, blue , lightskyblue 45%);
     padding: 5px;
     border-radius: 8px;
     display: flex;
@@ -54,7 +58,7 @@ main {
 }
 
 .card {
-   background: linear-gradient(35deg, lightskyblue , whitesmoke 85%);
+   background: linear-gradient(35deg, blue , lightskyblue 45%);
     width: 68%;
     margin: 5px;
     padding: 5px;
@@ -63,7 +67,7 @@ main {
 }
 
 button {
-    background: linear-gradient(35deg, lightskyblue , whitesmoke 95%);
+    background: linear-gradient(55deg, blue , lightskyblue 45%);
     color: black;
     margin: 5px;
 }
