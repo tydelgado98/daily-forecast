@@ -6,6 +6,12 @@
 - I needed to show how to store info and history into the local storage.
 - I've made this weather app to show the weather for the next five days.
 
+## Screenshot    ![ScreenShot of page](assets/images/Screenshot%202023-01-11%20220128.png)
+
+
+## LINK -- https://tydelgado98.github.io/daily-forecast/
+
+
 ## Installation
 
 N/A
