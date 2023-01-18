@@ -2,9 +2,9 @@ let history = document.getElementById('history');
 let current = document.getElementById('current');
 let forecast = document.getElementById('forecast');
 
-renderHistory();
+render_History();
 
-async function renderHistory() {
+async function render_History() {
   if(localStorage.history) {
     let store = await JSON.parse(localStorage.history);
     history.innerHTML ='';
@@ -15,7 +15,7 @@ async function renderHistory() {
   }
 };
 
-renderHistory();
+
 
 document.querySelector('#search').addEventListener('click', searchCity);
 
@@ -35,7 +35,7 @@ async function searchCity() {
 
   localStorage.history = JSON.stringify(store);
 
-  renderHistory();
+  render_History();
 
   let { list } = await (await fetch(`http://api.openweathermap.org/data/2.5/forecast?appid=3be2b2b6acc21e3760901d15acf91f72&units=imperial&q=${city}`)).json()
 
