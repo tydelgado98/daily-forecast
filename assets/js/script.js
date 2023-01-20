@@ -37,7 +37,7 @@ async function searchCity() {
 
   render_History();
 
-  let { list } = await (await fetch(`http://api.openweathermap.org/data/2.5/forecast?appid=3be2b2b6acc21e3760901d15acf91f72&units=imperial&q=${city}`)).json()
+  let { list } = await (await fetch(`https://api.openweathermap.org/data/2.5/forecast?appid=3be2b2b6acc21e3760901d15acf91f72&units=imperial&q=${city}`)).json()
 
   let { dt, wind: { speed }, main: { temp, humidity }, weather: [{ icon }] } = list[0];
 
@@ -48,7 +48,7 @@ async function searchCity() {
     <h4>Wind: ${speed} MPH</h4>
     <h4>Humidity: ${humidity}%</h4> 
     </div>
-    <img src="http://openweathermap.org/img/wn/${icon}@2x.png">
+    <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
   `;
 
   forecast.innerHTML = "";
@@ -59,7 +59,7 @@ async function searchCity() {
     forecast.innerHTML += `
     <div class="card">
       <h4>${new Date(dt * 1000).toDateString().slice(0, -5)}<h4>
-      <img src="http://openweathermap.org/img/wn/${icon}@2x.png">
+      <img src="https://openweathermap.org/img/wn/${icon}@2x.png">
       <h6>Temp: ${temp}°F</h6>
       <h6>Wind: ${speed} MPH</h6>
       <h6>Humidity: ${humidity}%</h6>
